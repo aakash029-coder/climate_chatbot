@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Climate & Sustainability Coach</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- Landing Page Overlay -->
+  <div class="landing-overlay" id="landingOverlay">
+
+    <nav class="landing-nav">
+      <div class="landing-brand">CLIMATE COACH</div>
+      <div class="landing-badges">SDG 12 · SDG 13 · AI POWERED</div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-eyebrow">Global Climate Intelligence Engine</div>
+        <h1 class="hero-title">MAKE EVERY<br>CHOICE COUNT.</h1>
+        <p class="hero-sub">An intelligent sustainability coach helping you understand your environmental impact and turn everyday decisions into meaningful climate action.</p>
+        <button class="landing-cta cta-start" id="startSessionBtn">Launch AI Coach →</button>
+        <p class="hero-tags">PERSONALIZED · PRACTICAL · GLOBAL</p>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-num">01</div>
+          <div class="feature-line"></div>
+          <h3>Understand Your Impact</h3>
+          <p>Carbon footprint insights and practical ways to reduce your environmental impact.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-num">02</div>
+          <div class="feature-line"></div>
+          <h3>Consume With Intention</h3>
+          <p>Smarter guidance for food, energy, products, fashion and everyday consumption.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-num">03</div>
+          <div class="feature-line"></div>
+          <h3>Turn Awareness Into Action</h3>
+          <p>Simple strategies for reducing waste and building sustainable habits.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sdg-section">
+      <h2 class="sdg-title">TWO GOALS.<br>ONE DIRECTION.</h2>
+      <div class="sdg-row">
+        <div class="sdg-item">
+          <span class="sdg-num">12</span>
+          <p>Responsible Consumption &amp; Production</p>
+        </div>
+        <div class="sdg-item">
+          <span class="sdg-num">13</span>
+          <p>Climate Action</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-section">
+      <h2 class="final-title">THE PLANET DOESN'T NEED<br>PERFECT PEOPLE.<br>IT NEEDS BETTER CHOICES.</h2>
+      <button class="landing-cta cta-start">Launch AI Coach →</button>
+      <p class="landing-note">SYSTEM NOTE: This AI provides educational guidance on sustainability and climate action. It does not provide medical, legal, or financial advice.</p>
+    </section>
+
+  </div>
+
+  <!-- Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h2>Menu</h2>
+      <button class="sidebar-close" id="sidebarClose">&times;</button>
+    </div>
+    <nav class="sidebar-nav">
+      <button class="sidebar-item" data-view="home">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Home
+      </button>
+      <button class="sidebar-item active" data-view="chat">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Chat
+      </button>
+      <button class="sidebar-item" data-view="quiz">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        Quiz
+      </button>
+      <button class="sidebar-item" data-view="history">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="10"/></svg>
+        History
+      </button>
+    </nav>
+    <div class="sidebar-conversations">
+      <div class="sidebar-conv-header">
+        <span>Conversations</span>
+        <button class="sidebar-conv-clear" id="clearAllConvsBtn" title="Clear all">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+        </button>
+      </div>
+      <div class="sidebar-conv-list" id="sidebarConvList">
+        <div class="conv-empty">No conversations yet</div>
+      </div>
+    </div>
+    <div class="sidebar-footer">
+      <div class="sidebar-sdg-badge">🌍 SDG 12 & 13</div>
+    </div>
+  </div>
+
+  <!-- Main Area -->
+  <div class="main-area">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="header-content">
+        <div class="header-left">
+          <button class="hamburger" id="hamburgerBtn">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="logo">
+            <span class="logo-icon">🌍</span>
+            <div class="logo-text">
+              <h1>Climate & Sustainability Coach</h1>
+              <p>Guiding sustainable choices for SDG 12 & 13</p>
+            </div>
+          </div>
+        </div>
+        <button class="clear-btn" id="clearBtn">+ New Chat</button>
+      </div>
+    </div>
+
+    <!-- Content Area -->
+    <div class="content-area">
+
+      <!-- Chat View -->
+      <div class="view active" id="chatView">
+        <div class="chat-container" id="chatContainer">
+          <div class="welcome-message">
+            <div class="welcome-icon">🌱</div>
+            <h2>Welcome to the Global Climate & Sustainability Coach</h2>
+            <p>I'm here to guide you toward sustainable consumption, waste reduction, and lower-impact lifestyle choices.</p>
+            <div class="topic-chips">
+              <button class="chip" data-message="How can I reduce my carbon footprint at home?">Carbon Footprint</button>
+              <button class="chip" data-message="What are the best practices for sustainable consumption?">Sustainable Consumption</button>
+              <button class="chip" data-message="How can I reduce food waste in my daily life?">Food Waste</button>
+              <button class="chip" data-message="What are effective ways to reduce plastic use?">Plastic Reduction</button>
+              <button class="chip" data-message="How can I make my wardrobe more sustainable?">Fashion Sustainability</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quiz View -->
+      <div class="view" id="quizView">
+        <div class="quiz-wrapper">
+          <div class="quiz-landing" id="quizLanding">
+            <div class="quiz-landing-icon">🧠</div>
+            <h2>Climate & Sustainability Quiz</h2>
+            <p>Test your knowledge about sustainable practices, climate science, and environmental responsibility.</p>
+            <div class="quiz-stats-bar" id="quizStatsBar"></div>
+            <div class="quiz-options">
+              <div class="quiz-option-card">
+                <h3>Quick Quiz</h3>
+                <p>5 questions to test your basic knowledge.</p>
+                <button class="quiz-start-btn" data-count="5">Start Quick Quiz</button>
+              </div>
+              <div class="quiz-option-card">
+                <h3>Full Quiz</h3>
+                <p>10 questions for a comprehensive assessment.</p>
+                <button class="quiz-start-btn" data-count="10">Start Full Quiz</button>
+              </div>
+            </div>
+          </div>
+          <div class="quiz-active hidden" id="quizActive">
+            <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quizProgressFill"></div></div>
+            <div class="quiz-header-row">
+              <span class="quiz-category-badge" id="quizCategoryBadge"></span>
+              <span class="quiz-counter" id="quizCounter"></span>
+              <span class="quiz-timer" id="quizTimer">00:00</span>
+            </div>
+            <div class="quiz-question-card">
+              <h3 id="quizQuestionText"></h3>
+              <div class="quiz-options-list" id="quizOptionsList"></div>
+            </div>
+            <div class="quiz-feedback hidden" id="quizFeedback"></div>
+            <div class="quiz-nav">
+              <button class="quiz-nav-btn" id="quizPrevBtn">← Previous</button>
+              <button class="quiz-nav-btn primary" id="quizNextBtn">Next →</button>
+              <button class="quiz-nav-btn primary hidden" id="quizSubmitBtn">Submit Quiz</button>
+            </div>
+          </div>
+          <div class="quiz-results hidden" id="quizResults">
+            <div class="results-card">
+              <div class="results-score-circle" id="resultsScoreCircle">
+                <div class="results-percentage" id="resultsPercentage"></div>
+                <div class="results-label">Score</div>
+              </div>
+              <h2 id="resultsTitle"></h2>
+              <p id="resultsSummary"></p>
+              <div class="results-stats" id="resultsStats"></div>
+            </div>
+            <div class="results-breakdown" id="resultsBreakdown"></div>
+            <div class="results-actions">
+              <button class="quiz-start-btn secondary" id="retakeQuizBtn">Retake Quiz</button>
+              <button class="quiz-start-btn" id="backToQuizHomeBtn">Back to Quiz Home</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- History View -->
+      <div class="view" id="historyView">
+        <div class="history-wrapper">
+          <div class="history-header">
+            <h2>Quiz History</h2>
+            <button class="history-clear-btn" id="clearHistoryBtn">Clear History</button>
+          </div>
+          <div class="history-stats-row" id="historyStatsRow"></div>
+          <div class="history-list" id="historyList">
+            <div class="history-empty">
+              <div class="history-empty-icon">📋</div>
+              <p>No quiz history yet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Chat Input -->
+    <div class="input-container" id="chatInputContainer">
+      <div class="input-wrapper">
+        <textarea id="messageInput" rows="1" placeholder="Ask about sustainability, climate action, or SDGs..."></textarea>
+        <button class="send-btn" id="sendBtn" disabled>
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </div>
+      <div class="disclaimer">This AI provides educational guidance on sustainability and climate action. It does not provide medical, legal, or financial advice.</div>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "climate-sustainability-coach",
+  "version": "1.0.0",
+  "description": "Global Climate & Sustainability Coach - SDG 12 & 13",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "groq-sdk": "^1.6.0",
+    "openai": "^4.20.0"
+  }
+}
